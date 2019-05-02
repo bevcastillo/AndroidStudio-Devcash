@@ -7,22 +7,21 @@
     tools:context=".SettingsActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Settings!"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"/>
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Press Me"
+        android:text="View First Fragment"
         android:layout_gravity="center"
         android:background="@color/colorPrimary"
         android:textColor="@color/colorWhite"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:padding="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/fragment_container"/>
 
 </LinearLayout>

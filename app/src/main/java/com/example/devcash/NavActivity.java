@@ -2,8 +2,12 @@ package com.example.devcash;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -30,15 +34,17 @@ public class NavActivity extends AppCompatActivity
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentaddprod = new Intent(NavActivity.this, AddProductActivity.class);
-                startActivity(intentaddprod);
-            }
-        });
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intentaddprod = new Intent(NavActivity.this, AddProductActivity.class);
+//                startActivity(intentaddprod);
+//            }
+//        });
+
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,7 +52,48 @@ public class NavActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setupDrawerContent(navigationView);
     }
+
+/*
+    public void selectItemDrawer(MenuItem menuItem){
+        Fragment myFragment = null;
+        Class fragmentClass;
+
+        switch (menuItem.getItemId()){
+            case R.id.nav_sales:
+                fragmentClass = SalesFragment.class;
+                break;
+            case R.id.nav_inventory:
+                fragmentClass = InventoryFragment.class;
+                break;
+            default:
+                fragmentClass = SalesFragment.class;
+        }
+        try{
+            myFragment = (Fragment) fragmentClass.newInstance();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flcontent, myFragment).commit();
+        menuItem.setChecked(true);
+        setTitle(menuItem.getTitle());
+        drawer.closeDrawer(GravityCompat.START);
+    }
+*/
+
+/*    private void setupDrawerContent(NavigationView navigationView){
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                selectItemDrawer(menuItem);
+                return true;
+            }
+        });
+    }*/
 
     @Override
     public void onBackPressed() {
@@ -80,36 +127,51 @@ public class NavActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+    private void displaySelectedScreen(int id){
+        Fragment fragment = null;
+
         switch (id){
             case R.id.nav_dashboard:
-                Intent intentdash = new Intent(NavActivity.this, DashboardActivity.class);
-                startActivity(intentdash);
+                fragment = new DashboardFragment();
                 break;
             case R.id.nav_sales:
-                Toast.makeText(this,"Sales.",Toast.LENGTH_SHORT).show();
+                fragment = new SalesFragment();
                 break;
             case R.id.nav_inventory:
-                Toast.makeText(this,"Inventory.",Toast.LENGTH_SHORT).show();
+                fragment = new InventoryFragment();
                 break;
             case R.id.nav_reports:
                 Toast.makeText(this,"Reports.",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_notifs:
                 Toast.makeText(this,"Notifications.",Toast.LENGTH_SHORT).show();
-                break;
+
             case R.id.nav_helpcenter:
-                Toast.makeText(this,"Help Center.",Toast.LENGTH_SHORT).show();
+                fragment = new HelpCenterFragment();
                 break;
             case R.id.nav_settings:
                 Intent intentsettings = new Intent(NavActivity.this, SettingsActivity.class);
                 startActivity(intentsettings);
                 break;
         }
+
+        if(fragment != null){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flcontent, fragment);
+            ft.commit();
+        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        displaySelectedScreen(id);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

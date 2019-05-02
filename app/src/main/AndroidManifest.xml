@@ -12,7 +12,7 @@
         <activity
             android:name=".AddCategoryActivity"
             android:label="@string/title_addcat"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".AddDiscountActivity"
             android:label="@string/title_adddisc"
@@ -25,7 +25,6 @@
             android:name=".AddServicesActivity"
             android:label="@string/title_addservice"
             android:screenOrientation="landscape" />
-        <activity android:name=".SampleActivity" />
         <activity
             android:name=".AddProductActivity"
             android:label="@string/title_addprod"
@@ -33,10 +32,6 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/menu_settings"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".DashboardActivity"
-            android:label="@string/menu_dashboard"
             android:screenOrientation="landscape" />
         <activity
             android:name=".NavActivity"
