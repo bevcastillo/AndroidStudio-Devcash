@@ -1,4 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/menu_dashboard"/>
+        <item
+            android:id="@+id/nav_sales"
+            android:icon="@drawable/ic_shopping_basket_black_24dp"
+            android:title="@string/menu_sales"/>
+        <item
+            android:id="@+id/nav_inventory"
+            android:icon="@drawable/ic_storage_black_24dp"
+            android:title="@string/menu_inventory"/>
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_trending_up_black_24dp"
+            android:title="@string/menu_reports"/>
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_notifs"
+                android:icon="@drawable/ic_notifications_black_24dp"
+                android:title="@string/menu_notifs"/>
+            <item
+                android:id="@+id/nav_helpcenter"
+                android:icon="@drawable/ic_help_outline_black_24dp"
+                android:title="@string/menu_help"/>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/menu_settings"/>
+        </menu>
+    </item>
 
 </menu>

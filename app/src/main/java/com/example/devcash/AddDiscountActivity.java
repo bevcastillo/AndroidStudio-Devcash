@@ -6,18 +6,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class AddProductActivity extends AppCompatActivity {
+public class AddDiscountActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_product);
+        setContentView(R.layout.activity_add_discount);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //inflate SAVE menu
-        getMenuInflater().inflate(R.menu.addprod_savemenu, menu);
+        getMenuInflater().inflate(R.menu.adddisc_savemenu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -27,8 +27,8 @@ public class AddProductActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //menu item click handling
-        if(id == R.id.save_addprod){
-            Toast.makeText(this, "Product successfully added!", Toast.LENGTH_SHORT).show();
+        if(id == R.id.save_adddisc){
+            Toast.makeText(this, "Discount successfully added!", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

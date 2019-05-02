@@ -10,10 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".NavDrawer"
-            android:label="@string/dashboard_name"
+            android:name=".AddCategoryActivity"
+            android:label="@string/title_addcat"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".AddDiscountActivity"
+            android:label="@string/title_adddisc"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AddEmployeeActivity"
+            android:label="@string/title_addemp"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AddServicesActivity"
+            android:label="@string/title_addservice"
+            android:screenOrientation="landscape" />
+        <activity android:name=".SampleActivity" />
+        <activity
+            android:name=".AddProductActivity"
+            android:label="@string/title_addprod"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/menu_settings"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DashboardActivity"
+            android:label="@string/menu_dashboard"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".NavActivity"
+            android:label="Navagation Activity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OwnerLogin"
             android:screenOrientation="landscape"

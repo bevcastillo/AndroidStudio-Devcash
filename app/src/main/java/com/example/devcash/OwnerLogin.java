@@ -39,7 +39,7 @@ public class OwnerLogin extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Fields can not be empty!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getApplicationContext(),"Successfully logged in.", Toast.LENGTH_SHORT).show();
-                    Intent ownerdashboardintent = new Intent(OwnerLogin.this, NavDrawer.class);
+                    Intent ownerdashboardintent = new Intent(OwnerLogin.this, NavActivity.class);
                     startActivity(ownerdashboardintent);
                 }
             }

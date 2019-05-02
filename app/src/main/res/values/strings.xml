@@ -2,17 +2,29 @@
     <string name="app_name">Devcash</string>
 
     <!-- strings for drawer titles-->
-    <string name="dashboard_name">Dashboard</string>
-    <string name="sales_name">Sales</string>
-    <string name="inventory_name">Inventory</string>
-    <string name="reports_name">Reports</string>
-    <string name="notifs_name">Notifications</string>
-    <string name="help_name">Help Center</string>
-    <string name="settings_name">Settings</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_sales">Sales</string>
+    <string name="menu_inventory">Inventory</string>
+    <string name="menu_reports">Reports</string>
+    <string name="menu_notifs">Notifications</string>
+    <string name="menu_help">Help Center</string>
+    <string name="menu_settings">Settings</string>
 
     <!-- strings for opening and closing the drawer -->
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+
+    <!-- strings for nav titles -->
+    <string name="title_addprod">Add product</string>
+    <string name="title_edprod">Edit product</string>
+    <string name="title_addservice">Add service</string>
+    <string name="title_edservice">Edit service</string>
+    <string name="title_addemp">Add employee</string>
+    <string name="title_edemop">Edit employee</string>
+    <string name="title_adddisc">Add discount</string>
+    <string name="title_eddisc">Edit discount</string>
+    <string name="title_addcat">Add category</string>
+    <string name="title_edcat">Edit category</string>
 
 
     <string name="title_activity_nav_drawer">NavDrawer</string>
@@ -24,4 +36,67 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <!-- sold by options -->
+    <string name="stringEach">Each</string>
+    <string name="stringWeight">Weight</string>
+
+    <!-- employee task options -->
+    <string name="stringCashier">Cashier</string>
+
+    <!-- discount type options -->
+    <string name="stringPercentage">Percentage</string>
+    <string name="stringAmount">Amount</string>
+
+    <!-- card titles -->
+    <string name="stringDisc">Discounts</string>
+    <string name="stringInventory">Inventory</string>
+    <string name="stringVariants">Variants</string>
+    <string name="stringPOS">Representation on POS</string>
+
+    <!-- spinner categories -->
+    <string-array name="prodcategorylist">
+        <item>Select category</item>
+        <item>Uncategorized</item>
+        <item>Category 1</item>
+        <item>Category 2</item>
+        <item>Category 3</item>
+        <item>Category 4</item>
+        <item>Category 5</item>
+    </string-array>
+
+    <string-array name="servicecategorylist">
+        <item>Select category</item>
+        <item>Uncategorized</item>
+        <item>Category 1</item>
+        <item>Category 2</item>
+        <item>Category 3</item>
+        <item>Category 4</item>
+        <item>Category 5</item>
+    </string-array>
+
+    <string-array name="conditionlist">
+        <item>Select condition</item>
+        <item>New</item>
+        <item>Damaged</item>
+        <item>Lost</item>
+        <item>Disposed of</item>
+    </string-array>
+
+    <string-array name="unitlist">
+        <item>Select unit</item>
+        <item>kilograms</item>
+        <item>inches</item>
+        <item>meter</item>
+    </string-array>
+
+    <string-array name="discountlist">
+        <item>Select discount</item>
+        <item>Discount 1</item>
+        <item>Discount 2</item>
+    </string-array>
+
 </resources>

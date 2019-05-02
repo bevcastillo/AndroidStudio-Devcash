@@ -1,5 +1,6 @@
 package com.example.devcash;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,26 +14,33 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Toast;
 
 public class NavActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    DrawerLayout drawer;
+    NavigationView navigationView;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intentaddprod = new Intent(NavActivity.this, AddProductActivity.class);
+                startActivity(intentaddprod);
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        drawer = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -77,19 +85,30 @@ public class NavActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_home) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        switch (id){
+            case R.id.nav_dashboard:
+                Intent intentdash = new Intent(NavActivity.this, DashboardActivity.class);
+                startActivity(intentdash);
+                break;
+            case R.id.nav_sales:
+                Toast.makeText(this,"Sales.",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_inventory:
+                Toast.makeText(this,"Inventory.",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_reports:
+                Toast.makeText(this,"Reports.",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_notifs:
+                Toast.makeText(this,"Notifications.",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_helpcenter:
+                Toast.makeText(this,"Help Center.",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_settings:
+                Intent intentsettings = new Intent(NavActivity.this, SettingsActivity.class);
+                startActivity(intentsettings);
+                break;
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

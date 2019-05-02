@@ -4,12 +4,23 @@
     <color name="colorPrimaryDark">#bc3e19</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="colorWhiteBG">#F0F0F0</color>
     <color name="colorWhite">#fafafa</color>
     <color name="colorIcon">#424949</color>
     <color name="colorDarkText">#1B2631</color>
     <color name="coloLightGray">#ebf0f3</color>
     <color name="colorLightOrange">#ed5f36</color>
     <color name="colorLighterOrange">#f7b8a5</color>
+
+    <!-- POS colors option -->
+    <color name="colorGray">#808080</color>
+    <color name="colorPeach">#E8B182</color>
+    <color name="colorYellow">#F5D010</color>
+    <color name="colorYellowGreen">#56EE0F</color>
+    <color name="colorRed">#F52020</color>
+    <color name="colorSkySkyBlue">#2980B9</color>
+    <color name="colorBlue">#0033CC</color>
+    <color name="colorPurple">#AF7AC5</color>
 
 
 </resources>

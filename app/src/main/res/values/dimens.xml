@@ -5,4 +5,12 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Text size for the cards. -->
+    <dimen name="card_title">10dp</dimen>
+    <dimen name="card_title_name">14dp</dimen>
+
+    <dimen name="smallText">14dp</dimen>
+    <dimen name="mediumText">18dp</dimen>
+    <dimen name="largeText">22dp</dimen>
 </resources>
